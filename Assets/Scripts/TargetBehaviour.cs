@@ -14,5 +14,6 @@ public class TargetBehaviour : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector3.up * Time.deltaTime * 0.5f);
+        transform.LookAt(new Vector3(0.0f, 0.0f, 0.0f));
     }
 }

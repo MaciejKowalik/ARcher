@@ -14,8 +14,9 @@ public class SpawnTargets : MonoBehaviour
 
     IEnumerator StartSpawningTargets()
     {
-        yield return new WaitForSeconds(3);
-        Instantiate(target, new Vector3(0.0f, -3.0f, 1.5f), Quaternion.identity);
+        yield return new WaitForSeconds(2);
+
+        Instantiate(target, new Vector3(Random.Range(-8.0f, 8.0f), -2.0f, Random.Range(-8.0f, 8.0f)), Quaternion.identity);
         StartCoroutine(StartSpawningTargets());
     }
 }
